@@ -39,11 +39,9 @@ def shortest_path(graph, start, end):
     while vertex is not None:
 
         path.append(vertex)
-
         vertex = pred[vertex]
 
 
 
     # Reverse the path
-
     path = path[::-1]

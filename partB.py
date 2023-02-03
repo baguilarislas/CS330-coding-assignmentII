@@ -31,3 +31,19 @@ def shortest_path(graph, start, end):
             if dist[neighbor] > dist[current] + weight:
                 dist[neighbor] = dist[current] + weight
                 pred[neighbor] = current
+    
+    # Build shortest path
+    path = []
+    vertex = end
+
+    while vertex is not None:
+
+        path.append(vertex)
+
+        vertex = pred[vertex]
+
+
+
+    # Reverse the path
+
+    path = path[::-1]

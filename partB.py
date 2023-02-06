@@ -45,3 +45,21 @@ def shortest_path(graph, start, end):
 
     # Reverse the path
     path = path[::-1]
+
+    # Print the shortest path and its length
+
+    if dist[end] != float('infinity'):
+
+        print("Shortest path:", ' -> '.join(path))
+        print("Length of the shortest path:", dist[end])
+
+    else:
+        print("No path from {} to {}".format(start, end))
+
+if __name__ == "__main__":
+
+
+    parser = argparse.ArgumentParser(description='Find the shortest path between two vertices')
+    parser.add_argument('start', type=str, help='The start vertex')
+    parser.add_argument('end', type=str, help='The end vertex')
+    args = parser.parse_args()

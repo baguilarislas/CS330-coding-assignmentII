@@ -63,3 +63,27 @@ if __name__ == "__main__":
     parser.add_argument('start', type=str, help='The start vertex')
     parser.add_argument('end', type=str, help='The end vertex')
     args = parser.parse_args()
+
+ # Initialize the graph and the set of vertices
+
+    graph = defaultdict(dict)
+    vertices = set()
+    edge_count = defaultdict(int)
+
+    # Read the graph from standard input
+
+    for i, line in enumerate(sys.stdin):
+        edge = line.strip().split()
+        if len(edge) != 3:
+            print("Invalid input at line", i+1)
+            sys.exit(1)
+
+        start, end, weight = edge
+
+# check if weight is valid
+
+    if not re.match(r"^[0-9]+(\.[0-9]{1,4})?$",weight):
+        print("Invalid weight at line", i+1)
+        sys.exit(1)
+
+    weight = float(weight)

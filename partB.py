@@ -87,3 +87,13 @@ if __name__ == "__main__":
         sys.exit(1)
 
     weight = float(weight)
+
+     # check if vertex is valid
+
+    if not re.match(r"^[A-Za-z0-9]+$", start) or not re.match(r"^[A-Za-z0-9]+$", end):
+
+        print("Invalid vertex name at line", i+1)
+        sys.exit(1)
+
+    vertices.add(start)
+    vertices.add(end)

@@ -97,3 +97,16 @@ if __name__ == "__main__":
 
     vertices.add(start)
     vertices.add(end)
+
+    # Check if edge is already present in graph
+
+    if edge_count[(start, end)] > 0:
+
+        print("Duplicate edge at line", i+1, ", first appeared at", edge_count[(start, end)])
+        sys.exit(1)
+
+    else:
+       edge_count[(start, end)] = i+1
+
+    graph[start][end] = weight
+    graph[end][start] = weight

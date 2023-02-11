@@ -110,3 +110,13 @@ if __name__ == "__main__":
 
     graph[start][end] = weight
     graph[end][start] = weight
+
+    # Check if start and end vertices are present in graph
+
+    if args.start not in vertices or args.end not in vertices:
+
+        print("Invalid start or end vertex")
+        sys.exit(1)
+
+    # Call the shortest_path functiona
+    shortest_path(graph, args.start, args.end)

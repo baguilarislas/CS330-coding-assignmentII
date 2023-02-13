@@ -1,5 +1,27 @@
 # CS330-coding-assignmentII
-Coding assgnment relating to graphs made to remmediate the incomplete grade
+Coding assgnment relating to graphs made to remmediate the incomplete grade 
+
+# Part A
+This part generates a graph and can guaarantee that it is connected. the arguments are as follows 
+
+```python3 partA.py --vertices x --connected```
+
+where x is the number of vertices and the second argument will guarantee that the graph is connected
+
+# Part B
+
+This part generates the shortest part of a graph, arguments are as follows
+
+```python3 partB.py x y```
+
+where x and y are star and end vertices respectively and then you are prompted to input a graph description in the form
+
+```
+a c 12
+c b 3
+c e 1
+e b 5
+```
 
 # Instructions 
 
@@ -33,7 +55,7 @@ $ sudo apt-get install git-all
   $ cd CS330-codingAssignmentII
 ```
 
-To generate an executable from a Python file on Ubuntu 22.04, you can follow these steps:
+# To generate an executable from a Python file on Ubuntu 22.04:
 
 Install PyInstaller by running the following command in the terminal:
 
@@ -49,7 +71,7 @@ cd/path/to/your/python/file
 Use PyInstaller to create an executable by running the following command:
 
 ```
-pyinstaller your_script.py
+pyinstaller partA.py or partB.py
 ```
 This will create a dist directory with the executable and other necessary files.
 
@@ -58,7 +80,7 @@ You can now run the executable by navigating to the dist directory and running t
 ```
 bash
 cd dist
-./your_script
+./partA.py or ./partB.py
 ```
 
 Note: You may need to install additional libraries or packages if your Python file requires them for the executable to work properly.
